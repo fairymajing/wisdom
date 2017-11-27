@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善资料</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/lo_re_fo.css"/>
+</head>
+<body>
+<div class="perfect-header"></div>
+<form class="col-sm-4 col-sm-offset-4 padding-form input-radius form-horizontal" id="perfect" v-on:submit.prevent="submitForm()">
+   <div class="perfect-form-fill" >
+       <div class="form-group">
+           <label for="nickname" class="col-sm-3 control-label perfect-label">昵称</label>
+           <div class="col-sm-9">
+               <input type="email" class="form-control input-style" id="nickname" placeholder="请输入昵称">
+           </div>
+           <span  class="help-block col-sm-9 col-sm-offset-3 font-color">昵称将于用显示在教师的班级成员列表和公开课评论中，建议您填写真实姓名</span>
+       </div>
+       <div class="form-group">
+           <label  class="col-sm-3 control-label perfect-label">性别</label>
+           <div class="col-sm-9">
+               <label class="control-label perfect-label perfect-radio font-color">
+                   <input type="radio" name="sex"  value="0" class="register-check-box " v-on:click="changeMan()">&#12288;男
+               </label>
+               <label class="control-label perfect-label perfect-radio-no font-color">
+                   <input type="radio" name="sex"  value="1" class="register-check-box " v-on:click="changeWoman()">&#12288;女
+               </label>
+           </div>
+       </div>
+       <div class="form-group" v-on:click="perfect_school()">
+           <label for="perfect_school" class="col-sm-3 control-label perfect-label">所在学校</label>
+           <div class="col-sm-9">
+               <img src="../../img/school.png" class="perfect-input-img">
+               <input type="text" class="form-control input-style" id="perfect_school" placeholder="请选择所在学校">
+           </div>
+       </div>
+       <div class="form-group" v-on:click="perfect_grade()">
+           <label for="perfect_grade" class="col-sm-3 control-label perfect-label">年级</label>
+           <div class="col-sm-9">
+               <img src="../../img/grade.png" class="perfect-input-img">
+               <input type="text" class="form-control input-style" id="perfect_grade" placeholder="请选择年级">
+           </div>
+       </div>
+       <div class="form-group ">
+           <button type="submit" class="btn btn-warning btn-block login-submit input-radius">完成</button>
+       </div>
+   </div>
+    <div class="perfect-form-school" style="display: none">
+        <div class="form-group ">
+            <p class="text-left">所在学校选择<img src="../../img/close.png" class="perfect-close" v-on:click="closeSchool()"></p>
+            <hr class="perfect-line">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control  input-style input-radius"  placeholder="输入学校名称" v-model="school" v-on:keyup="searchSchools()">
+            <ul class="perfect-sarch col-sm-12">
+                <!--<li>暂无您搜索的学校</li>-->
+                <li class="over" v-for="(item,index) in schoolList" v-on:click="selectSchool(index)">{{item.name}}<hr></li>
+
+            </ul>
+        </div>
+        <p class="help-block text-center font-color"  >输入学校名称以匹配出合适的结果</p>
+        <div class="form-group ">
+            <button type="button" class="btn btn-warning btn-block login-submit input-radius" v-on:click="completeSchool()">完成</button>
+        </div>
+        <p class="help-block text-center font-color">没有匹配到你的学校？<a class="font-color-orange">点我添加</a></p>
+    </div>
+    <div class="perfect-form-grade" style="display: none">
+        <div class="form-group ">
+            <p class="text-left">年级选择<img src="../../img/close.png" class="perfect-close" v-on:click="closeGrade()"></p>
+            <hr class="perfect-line">
+        </div>
+        <ul class="form-group">
+            <li class="col-sm-4 perfect-grade-li" v-for="(item,index) in gradeList">
+                <div class="perfect-grade-tag" v-on:click="selectGrade(index)">{{item.name}}</div>
+            </li>
+        </ul>
+        <div class="form-group ">
+            <button type="button" class="btn btn-warning btn-block login-submit input-radius" v-on:click="completeGrade()">完成</button>
+        </div>
+    </div>
+</form>
+<div class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</div>
+<div class="copyright navbar-fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright © 2016-2017 天津慧教易学科技有限公司|</span>
+                <span>津ICP备16007904号-1 联系电话：4006-521-530</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/perfect_data.js"></script>
+</body>
+</html>

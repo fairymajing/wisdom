@@ -1,0 +1,52 @@
+.statistics-ranking{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+}
+.statistics-top{
+    background-color: #fff;
+    padding:20px 30px;
+    margin: 10px 0;
+}
+.statistics-bac{
+    background-color: #f5f5f5;
+}
+.statistics-ranking .col-sm-2,
+.statistics-text .col-sm-2{
+    text-align: center;
+}
+.statistics-ranking .col-sm-2 img{
+    width:90px;
+    height:90px;
+    border-radius: 45px;
+}
+.statistics-left{
+    background-color: #fff;
+    padding: 20px 30px;
+}
+.statistics-left-red{
+    width:120px;
+    height:100px;
+    border-radius: 10px;
+    color: #fff;
+    margin:20px auto 0;
+    background: -webkit-linear-gradient(to top left, #fb9da6, #feb64b); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to top left, #fb9da6, #feb64b); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to top left, #fb9da6, #feb64b); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top left, #fb9da6, #feb64b); /* 标准的语法 */
+}
+.statistics-left-blue{
+    width:120px;
+    height:100px;
+    border-radius: 10px;
+    color: #fff;
+    margin:20px auto 0;
+    background: -webkit-linear-gradient(to top left, #07edff, #4eb2ff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to top left, #07edff, #4eb2ff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to top left, #07edff, #4eb2ff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top left, #07edff, #4eb2ff); /* 标准的语法 */
+}
+.statistics-left-red>p:nth-child(1),
+.statistics-left-blue>p:nth-child(1){
+    padding-top: 20px;
+}

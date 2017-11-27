@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/lo_re_fo.css"/>
+</head>
+<body>
+<div class="login-header"></div>
+<form class="col-sm-4 col-sm-offset-4 input-radius padding-form" id="login" v-on:submit.prevent="submitForm()">
+    <div class="form-group">
+        <img src="../../img/login_phone.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="tel" class="form-control login-input input-radius"  placeholder="手机号/用户名" v-model="phoneNum">
+    </div>
+    <div class="form-group login-input-margin">
+        <img src="../../img/password.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="password" class="form-control login-input input-radius"  placeholder="密码" v-model="password">
+    </div>
+    <p>
+        <a href="../register/register.html" class="font-color">注册</a>
+        <a href="../forget/forget_password.html" class="login-forget font-color">忘记密码</a>
+    </p>
+    <button type="submit" class="btn btn-warning btn-block login-submit input-radius">登录</button>
+    <p class="text-center login-not"><a href="../home/home.html" class="font-color">不登录，直接进入</a></p>
+</form>
+<div class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</div>
+<div class="copyright navbar-fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright © 2016-2017 天津慧教易学科技有限公司|</span>
+                <span>津ICP备16007904号-1 联系电话：4006-521-530</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/login.js"></script>
+</body>
+</html>

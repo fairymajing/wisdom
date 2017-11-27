@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-----------------------------------------------------------登录头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-fixed-top navbar-orange" id="login-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <p class="navbar-text nav-login font-color-white font-size-28">|</p>
+        <p class="navbar-text nav-login font-color-white font-size-28">登录</p>
+        <p class="navbar-text nav-remarks font-color-white">若有问题请联系我们：4006-521-530</p>
+    </div>
+</nav>
+<!------------------------------------------------------------注册头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-fixed-top navbar-orange" id="register-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <p class="navbar-text nav-login font-color-white font-size-28">|</p>
+        <p class="navbar-text nav-login font-color-white font-size-28">注册</p>
+        <p class="navbar-text nav-remarks font-color-white">若有问题请联系我们：4006-521-530</p>
+    </div>
+</nav>
+<!--------------------------------------------------------------------忘记密码头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-fixed-top navbar-orange" id="forget-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <p class="navbar-text nav-login font-color-white">|</p>
+        <p class="navbar-text nav-login font-color-white">忘记密码</p>
+        <p class="navbar-text nav-remarks font-color-white">若有问题请联系我们：4006-521-530</p>
+    </div>
+</nav>
+<!--------------------------------------------------------------------完善信息头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-fixed-top navbar-orange" id="perfect-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <p class="navbar-text nav-login font-color-white font-size-28">|</p>
+        <p class="navbar-text nav-login font-color-white font-size-28">完善信息</p>
+        <p class="navbar-text nav-remarks font-color-white">若有问题请联系我们：4006-521-530</p>
+    </div>
+</nav>
+<!--------------------------------------------------------------------首页头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-orange-small" id="home-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-ul">
+                <li><a href="../../views/home/home.html" class="font-color-white">公开课</a></li>
+                <li><a href="../../views/grade/my_grade.html" class="font-color-white">班级</a></li>
+                <li><a href="#" class="font-color-white">统计</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-nav-right" style="display: none">
+                <li><a href="#" class="font-color-white"><img src="../../img/title_bell.png" class="nav-bell"></a></li>
+                <li class="nav-person">
+                    <a href="../../views/personal/personal_home.html" class="font-color-white ">
+                    <img class="nav-photo margin-right-10">
+                        <span class="nav-name"></span>
+                    </a>
+                    <div class="nav-exit over" id="navExit" v-on:click="exit()">退出登录</div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--------------------------------------------------------------------题型头部-------------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-orange-small" id="questions-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse question-right">
+            <ul class="nav navbar-nav">
+                <li class="question-time"><a class="font-color">作业时间<br><span class="question-time-margin font-size-mid">12:33:50</span></a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle question-detailed" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        科目 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu questions-totle">
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!---------------------------------------------------------------题型解析头部--------------------------------------------------------------->
+<nav class="navbar navbar-default navbar-orange-small" id="analysis-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="" href="#">
+                <img src="../../img/nav_logo.png">
+            </a>
+        </div>
+        <ul class="nav navbar-nav analysis-header-right">
+            <li class="over">疑问反馈</li>
+            <li class="over">任务信息<img src="../../img/xia.png"></li>
+            <li class="over">答题卡<img src="../../img/xia.png"></li>
+        </ul>
+    </div>
+</nav>
+<!---------------------------------------------------------------个人中心-左侧导航栏--------------------------------------------------------------->
+<ul class="btn-group-vertical col-sm-3" role="group" id="personal-nav">
+    <li class="personal-nav-active" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ban.png">个人资料
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ban.png">我的收藏
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ban.png">加入班级
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ren.png">我的任务
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_xiao.png">我的消息
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ben.png">错题本&#12288;
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_ban.png">意见反馈
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_guan.png">关于我们
+    </li>
+    <li class="" v-on:click="changeColor($event)">
+        <img src="../../img/personal_gai.png">修改密码
+    </li>
+</ul>
+<script src="../../js/common.js"></script>
+</body>
+</html>

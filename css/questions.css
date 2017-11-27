@@ -1,0 +1,203 @@
+/************************************************************题型头部*******************************************************************/
+.question-right{
+    float: right;
+}
+.question-time{
+    background-color: #fff;
+}
+.question-time-margin{
+    line-height: 29px;
+}
+.question-detailed{
+    line-height: 49px !important;
+}
+.questions-totle{
+    left: -1500%;
+    /*min-width: 1300% !important;*/
+}
+/************************************************************完形填空*******************************************************************/
+.question-but button{
+    width:120px;
+}
+.question-text{
+    line-height: 28px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.cloze-answer,
+.multiselect-answer,
+.indefinite-answer{
+    width: 100%;
+    height:60px;
+    line-height: 60px;
+    padding:0 30px;
+    border-radius: 10px;
+}
+.cloze-answer-box{
+    margin-top: 30px;
+}
+.cloze-answers,
+.multiselect-answers,
+.indefinite-answers{
+    margin-right: 40px !important;
+    opacity: 0;
+}
+.cloze-radio{
+    border: 1px solid orange;
+    background: url("../img/question_radio.png") no-repeat ;
+    background-position: 24px 18px;
+}
+.cloze-radio-no{
+    background: url("../img/question_radio_no.png") no-repeat ;
+    background-position: 24px 18px;
+}
+/*************************************************************多选题********************************************************************/
+.multiselect-answer-on,
+.indefinite-answer-on{
+    border: 1px solid orange;
+    background: url("../img/question_radio.png") no-repeat 24px 18px;
+}
+/************************************************************填空题(1)*******************************************************************/
+.blanks-answer-num{
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    border-radius: 30px;
+    background-color: orange;
+    color: #fff;
+    margin-top: 25px;
+    margin-right: 30px;
+    padding-left:12px;
+}
+.blanks-answer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.blanks-answers{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height:60px;
+}
+/************************************************************填空题(2)*******************************************************************/
+.vacancy-area{
+    padding: 20px 30px;
+    height:300px;
+}
+.vacancy-img{
+    width:100%;
+    height:150px;
+    border: 1px dashed orange;
+}
+.vacancy-close{
+    position: absolute;
+    right:5px;
+    top:-10px;
+}
+.vacancy-question{
+    margin-top: 30px;
+}
+/************************************************************答题报告*******************************************************************/
+.finish-time{
+    display: inline-block;
+    padding:20px 30px;
+    border: 1px dashed orange;
+    border-radius: 10px;
+    color: orange;
+    margin-left: 20px;
+}
+.finish-top ul{
+    margin-top: 10px;
+}
+.finish-top ul li{
+    padding: 8px 0;
+    font-size: 18px;
+    color: orange;
+}
+.finish-top-time{
+    margin-top: 30px;
+    font-size: 18px;
+}
+.finish-top-box{
+    position: absolute;
+    padding: 10px 30px;
+    top:170px;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: #efefef;
+    border-radius: 10px;
+    display: none;
+}
+.finish-yuan-orange,
+.finish-yuan-blue,
+.finish-yuan-gray{
+    line-height: 14px;
+}
+.finish-yuan-orange>span{
+    display: inline-block;
+    background-color: orange;
+    width:14px;
+    height:14px;
+    border-radius: 7px;
+    margin-right: 14px;
+}
+.finish-yuan-blue>span{
+    display: inline-block;
+    background-color: #01a0a3;
+    width:14px;
+    height:14px;
+    border-radius: 7px;
+    margin-right: 14px;
+}
+.finish-yuan-gray>span{
+    display: inline-block;
+    background-color: #a0a0a0;
+    width:14px;
+    height:14px;
+    border-radius: 7px;
+    margin-right: 14px;
+}
+.finish-dy-orange{
+    display: inline-block;
+    background-color: orange;
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+.finish-dy-blue{
+    display: inline-block;
+    background-color: #01a0a3;
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+.finish-auto li{
+    text-align: center;
+}
+.finish-dy-null{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border: 1px solid orange;
+    color: #a0a0a0;
+}
+.finish-margin-20{
+    margin-top: 20px;
+}
+.finish-margin-30{
+    margin-top: 33px;
+}
+.finish-totle li{
+    text-align: center;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师个人主页</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/home.css"/>
+</head>
+<body>
+<div class="teacher-header"></div>
+<div class="container-fluid" id="teacher">
+    <div class="row">
+        <div class="col-sm-12 teacher-banner">
+            <img v-bind:src="message.avatar" class="teacher-display teacher-photo">
+            <span class=" teacher-school font-color-white input-radius">{{message.school}}</span>
+            <p class="text-center teacher-follow over" v-on:click="collectTecher()">
+                <img src="../../img/follow.png"><span class="font-color-white teacher-follow-text">收藏该教师</span>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h4 class="text-left margin-top-20"><span class="teacher-tag-margin">全部公开课</span></h4>
+        <div class="row margin-top-30">
+            <div class="col-sm-4 col-md-3 home-class" v-for = "item in message">
+                <div class="thumbnail home-class-padding">
+                    <img v-bind:src="item.image" class="home-class-bgi">
+                    <div class="caption" style="height: 110px;">
+                        <p>{{item.title}}</p>
+                        <p class="font-color"><img src="../../img/class_school.png">{{item.school}}</p>
+                        <p>
+                            <img src="../../img/class_person.png" class="margin-right-5">
+                            <span class="font-color font-size-14">{{item.teacher_name}}</span>
+                        </p>
+                        <p class="text-right watch-up-box">
+                            <img src="../../img/class_look.png" class="text-right">
+                            <span class="font-color font-size-14 text-right">{{item.view_num}}</span>
+                            <img src="../../img/class_zan.png" class="col-sm-offset-1 text-right">
+                            <span class="font-color font-size-14 text-right">dddd</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="text-left margin-top-20"><span class="teacher-tag-margin">教师简介</span></h4>
+        <div class="row margin-top-30">
+            <div class="col-sm-12 font-size-16" style="line-height: 28px">
+                {{message.brief}}
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/teacher_personal.js"></script>
+</body>
+</html>

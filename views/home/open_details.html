@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <title>公开课详情</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/hivideo.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/home.css"/>
+</head>
+<body>
+<div class="open-header"></div>
+<div class="container" id="open">
+    <p class="col-sm-12 font-size-16">易学公开课/李永乐/跟着名师教学/中考100讲之数学解题技巧（上）</p>
+    <p class="col-sm-12">{{message.title}}</p>
+    <div class="col-sm-12 margin-top-20">
+        <div class="main-wrap">
+            <video ishivideo="true" autoplay="true" isrotate="false" autoHide="true">
+                <source src="http://www.html5videoplayer.net/videos/madagascar3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="col-sm-5 open-left margin-top-20">
+        <p class="">{{message.title}}</p>
+        <p class="col-sm-3 font-size-14">{{message.video_num}}小节</p>
+        <p class="col-sm-9 font-size-14"><img src="../../img/play_black.png" class="margin-right-10">{{message.view_num}}人学习</p>
+        <div class="row">
+            <a v-bind:href="['teacher_personal.html?teacherId='+message.teacher_id]">
+            <div class="col-sm-3"><img v-bind:src="message.avatar" class="open-left-photo"></div>
+            <div class="col-sm-9 open-left-message">
+                <p class="font-size-16 font-color-normal">{{message.teacher_name}}</p><br>
+                <p class="font-size-16 font-color-normal">北师大出版社</p>
+            </div>
+            </a>
+        </div>
+        <p class="margin-top-20 font-size-16">课程信息：</p>
+        <p class="font-color font-line-height-28 font-size-16">&#12288;&#12288;{{message.brief}}
+        </p>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="open-left-btn collect-class over" v-on:click="collectClass()">收藏</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="open-left-btn over" v-on:click="support()"><img src="../../img/ding.png" class="margin-right-10">顶</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="open-left-btn over" v-on:click="oppose()"><img src="../../img/cai.png" class="margin-right-10">踩</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7 margin-top-20">
+        <ul class="open-tag">
+            <li class="open-tag-active over" v-on:click="showChapter($event)">章节列表</li>
+            <li class="col-sm-offset-1 over" v-on:click="showComment($event)">评论（{{comment.length}}）</li>
+        </ul>
+        <div class="row margin-top-50 chapter">
+            <div class="col-sm-12 margin-top-20 chapter-list" v-for="item in chapterList">
+                <div class="col-sm-1"><span class="chapter-list-ranking font-size-16">{{item.id}}</span></div>
+                <div class="col-sm-9 font-size-16 font-color">
+                    {{item.title}}
+                </div>
+                <div class="col-sm-2 font-size-16 font-color">
+                    {{item.time}}
+                </div>
+            </div>
+        </div>
+        <div class="row comment" style="display: none">
+            <div class="col-sm-12 margin-top-20 comment-list" v-for="item in comment">
+                <div class="col-sm-2">
+                    <img v-bind:src="item.avatar" class="comment-list-photo">
+                </div>
+                <div class="col-sm-6 font-size-16 ">
+                    {{item.content}}
+                </div>
+                <div class="col-sm-4 text-right comment-list-right font-size-16">
+                    {{item.created_at}}<br><span class="over" v-on:click="reply($event)">回复</span>
+                </div>
+                <div class="col-sm-12 comment-list-hide">
+                    <input class="col-sm-12 margin-top-20 comment-list-input">
+                    <div class="text-right">
+                        <span class="col-sm-2 col-sm-offset-8 over font-size-16"  v-on:click="clearReply($event)">取消</span>
+                        <span class="col-sm-2 "><span class="comment-list-btn over font-size-16">评论</span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row"  style="display: none">
+            <div class="col-sm-12 text-center margin-top-50">
+                <img src="../../img/smart.png">
+                <p class="font-size-18 margin-top-20">请您先登录才能继续操作哦！</p>
+                <p class="margin-top-50">
+                    <span>取消</span>
+                    <span class="col-sm-offset-1 open-right-login">登录</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 margin-top-50">
+        <p class="font-size-16">推荐公开课</p>
+        <div class="col-sm-3 home-class margin-top-10" v-for="item in recommend">
+            <div class="thumbnail home-class-padding">
+                <a v-bind:href="['open_details.html?pid='+item.pid+'&fid='+item.fid]">
+                    <img v-bind:src="item.image" class="home-class-bgi">
+                </a>
+                <div class="caption" style="height: 110px;">
+                    <p>{{item.title}}</p>
+                    <p class="font-color font-size-14"><img src="../../img/class_school.png" class="margin-right-10">{{item.school}}</p>
+                    <p>
+                        <img src="../../img/class_person.png" class="margin-right-5">
+                        <span class="font-color font-size-14">{{item.teacher_name}}</span>
+                    </p>
+                    <p class="text-right watch-up-box">
+                        <img src="../../img/class_look.png" class="text-right">
+                        <span class="font-color font-size-14 text-right">{{item.view_num}}</span>
+                        <img src="../../img/class_zan.png" class="col-sm-offset-1 text-right">
+                        <span class="font-color font-size-14 text-right">{{item.up}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/hivideo.js"></script>
+<script src="../../js/open_details.js"></script>
+</body>
+</html>

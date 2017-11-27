@@ -1,0 +1,257 @@
+/*!*左侧导航栏*!*/
+/*#navL{*/
+    /*padding: 100px 0px;*/
+    /*height: 80vh;*/
+    /*box-shadow: 0px 0px 15px rgba(153, 153, 153, .4);*/
+/*}*/
+/*#navL li{*/
+    /*height: 60px;*/
+    /*padding-left: 100px;*/
+
+/*}*/
+/*#navL li a{*/
+    /*color: orange;*/
+/*}*/
+/*.lithis{*/
+    /*color: #ffffff;*/
+    /*background: -webkit-linear-gradient(#ffc363, #ffa00e); !* Safari 5.1 - 6.0 *!*/
+    /*background: -o-linear-gradient(#ffc363, #ffa00e); !* Opera 11.1 - 12.0 *!*/
+    /*background: -moz-linear-gradient(#ffc363, #ffa00e); !* Firefox 3.6 - 15 *!*/
+    /*background: linear-gradient(#ffc363, #ffa00e); !* 标准的语法 *!*/
+/*}*/
+/*.divTopM{*/
+    /*height: auto;*/
+    /*box-shadow: 0px 0px 15px rgba(153, 153, 153, .4);*/
+    /*margin-left: 20px;*/
+    /*padding-top: 30px;*/
+/*}*/
+/*.xdz-head{*/
+    /*padding: 10px 15px 10px 15px;*/
+    /*font-size: 16px;*/
+    /*font-weight: 500;*/
+    /*color: orange;*/
+/*}*/
+/*.xdz-head:before {*/
+    /*content: "";*/
+    /*width: 5px;*/
+    /*height: 21px;*/
+    /*background-color: orange;*/
+    /*display: inline-block;*/
+    /*vertical-align: text-bottom;*/
+    /*margin-right: 16px;*/
+    /*margin-left: 25px;*/
+/*}*/
+/*.from-group{*/
+    /*overflow: hidden;*/
+/*}*/
+/*.ftp1{*/
+    /*padding-top: 40px;*/
+/*}*/
+/*#headimg{*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*border-radius: 50%;*/
+    /*padding: 0;*/
+/*}*/
+/*.form-horizontal .col-sm-10 span{*/
+    /*padding-top: 7px;*/
+/*}*/
+/*.btn{*/
+    /*background-color: orange;*/
+    /*color: #ffffff;*/
+/*}*/
+/*.btn:hover{*/
+    /*color: #ffffff;*/
+/*}*/
+/*****************************************************************左侧导航栏***********************************************************************/
+body{
+    font-size: 16px;
+}
+#personal-nav{
+    padding:100px 0 0;
+    height:700px;
+    box-shadow: 0px 0px 15px rgba(153, 153, 153, .4);
+}
+#personal-nav li{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: orange;
+}
+#personal-nav li img{
+    margin-right: 10px;
+
+}
+.personal-nav-active{
+    color: #fff !important;
+    background: -webkit-linear-gradient(#ffc363, #ffa00e); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffc363, #ffa00e); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffc363, #ffa00e); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffc363, #ffa00e); /* 标准的语法 */
+}
+.person-hide{
+    display: none !important;
+}
+.person-show{
+    display: inline-block !important;
+}
+/*****************************************************************个人资料***********************************************************************/
+.personal-right{
+    box-shadow: 0px 0px 15px rgba(153, 153, 153, .4);
+    height:700px;
+}
+.personal-right .btn{
+    cursor: pointer;
+}
+.message-upload{
+    position: relative;
+    top:-28px;
+    left:-70px;
+    opacity: 0;
+    cursor: pointer;
+}
+.message-padding{
+    padding-top: 8px;
+}
+.message-photo{
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+}
+.personal-message-phone input,
+.personal-message-nickname input,
+.personal-message-name input,
+.personal-grade input,
+.personal-password input{
+    width:250px !important;
+}
+.phone-verification{
+    width:140px !important;
+    border: 1px solid orange;
+    color: orange;
+}
+.phone-submit{
+    width: 400px !important;
+    margin-top: 20px;
+    border: 1px solid orange;
+    color: #fff;
+    background-color: orange;
+}
+.grade-list{
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #a0a0a0;
+    color: #a0a0a0;
+    margin: 10px 0;
+}
+.grade-list-active{
+    background-color: orange !important;
+    color: white !important;
+    border: 1px solid orange !important;
+}
+.school-but{
+    border: 1px solid orange;
+    color: #fff;
+    background-color: orange;
+}
+.message-photo{
+    width:80px;
+    height:80px;
+    border-radius: 40px;
+    position: relative;
+    top:-20px;
+}
+.personal-message .col-sm-2{
+    text-align: center;
+}
+.grade-active{
+    border: 1px solid orange;
+    color: #fff;
+    background-color: orange;
+}
+/*****************************************************************加入班级***********************************************************************/
+.search-box{
+    border: 1px solid #efefef;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+.search-box p{
+    margin-left: 50px;
+}
+.search-box button{
+    width:120px;
+    margin-top: 10px;
+}
+.search-box .btn-warning{
+    margin-top: 45px;
+}
+.search-img{
+    width:120px;
+}
+/*****************************************************************我的任务***********************************************************************/
+.task-tag li{
+    float: left;
+    width:40px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.task-tag-active,
+.collection-tag-active{
+    border-bottom: 1px solid orange;
+}
+.task-box-btn{
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #a0a0a0;
+    color: #fff;
+}
+.task-box-btn-orange{
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: orange;
+    color: #fff;
+}
+/*****************************************************************我的收藏***********************************************************************/
+.collection-tag li{
+    float: left;
+    width:50px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.collection-class-img{
+    height:180px !important;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.collection-class-padding{
+    padding: 0;
+    border-radius: 10px;
+}
+.collection-teacher-img{
+    width:146px;
+    height:146px !important;
+    border: 2px dashed orange;
+    border-radius: 75px;
+    margin:33px 0;
+}
+/*****************************************************************我的消息***********************************************************************/
+.news-line{
+    width: 100%;
+    background-color: #efefef;
+}
+/*****************************************************************意见反馈***********************************************************************/
+.opinion-area{
+    max-width: 683px;
+    min-height: 100px;
+    max-height: 200px;
+    resize: none;
+}

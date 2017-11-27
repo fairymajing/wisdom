@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/lo_re_fo.css"/>
+</head>
+<body>
+<div class="register-header"></div>
+<form class="col-sm-4 col-sm-offset-4 padding-form input-radius" id="register" v-on:submit.prevent="submitForm()">
+    <div class="form-group">
+        <img src="../../img/login_phone.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="tel" class="form-control login-input input-radius"  placeholder="手机号/用户名" v-model="phoneNum">
+    </div>
+    <div class="form-group login-input-margin">
+        <img src="../../img/password.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="text" class="form-control login-input input-radius"  placeholder="验证码" v-model="validata">
+            <button class="btn btn-warning checknum_btn" id="validataBtn" type="button" v-on:click="sendValidata()">
+                <span v-if="show">发送验证码</span>
+                <span v-if="!show">{{count}}s后可重发</span>
+            </button>
+    </div>
+    <div class="form-group login-input-margin">
+        <img src="../../img/password.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="password" class="form-control login-input input-radius" placeholder="输入6-20位长度的密码" v-model="password">
+    </div>
+    <div class="form-group login-input-margin">
+        <img src="../../img/sure_password.png" class="img-responsive login-input-img" alt="Responsive image">
+        <input type="password" class="form-control login-input input-radius"  placeholder="确认密码" v-model="rePassword">
+    </div>
+    <div class="checkbox">
+        <label class="register-check" >
+            <input type="checkbox" class="register-check-box" v-on:click="changeBgi()"><span class="font-color register-check-text">我已阅读并同意</span><a href="" class="font-color-orange">注册协议</a>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-warning btn-block login-submit input-radius">完成注册</button>
+    <p class="text-right login-not font-color">已有账户？<a href="../login/login.html" class="font-color-orange">直接登录</a></p>
+</form>
+<div class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</div>
+<div class="copyright navbar-fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright © 2016-2017 天津慧教易学科技有限公司|</span>
+                <span>津ICP备16007904号-1 联系电话：4006-521-530</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/register.js"></script>
+</body>
+</html>

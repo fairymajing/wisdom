@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完成作业</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/questions.css"/>
+</head>
+<body>
+<div class="question-header"></div>
+<div class="finish" id="finish">
+    <div class="finish-top">
+    <div class="container">
+        <div class="row">
+            <p class="col-sm-12">恭喜你完成了该作业任务！</p>
+            <p class="col-sm-12">第一学期第一讲*函数与曲线答题报告如下
+                    <img src="../../img/finish_wen.png" class="finish-top-question" v-on:mouseenter="showQuestion()" v-on:mouseleave="hiddenQuestion()">
+                </p>
+            <div class="finish-top-box col-sm-3 col-sm-offset-2 font-color">
+                    客观题：单选题、多选题、不定项选择题、判断题、填空题、完形填空和阅读理解，除部分填空题外，都会由系统自动判断并给出答案。<br>
+                    主观题：问答题、作文题、实验题，需要等待教师批改。
+                </div>
+            <ul class="col-sm-7">
+                    <li>客观题正确率：2/6</li>
+                    <li>主观题正确率：未批改</li>
+                    <li>全部正确率：未批改</li>
+                </ul>
+            <div class="col-sm-5 text-right font-color-orange finish-top-time">
+                    共用时长：<span class="finish-time">01:15:45</span>
+                </div>
+        </div>
+    </div>
+</div>
+    <div class="finish-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 title-vertical-blue">
+                    <span></span>客观题
+                </div>
+                <div class="col-sm-1 finish-yuan-orange finish-margin-30">
+                    <span></span>正确
+                </div>
+                <div class="col-sm-1 finish-yuan-blue finish-margin-30">
+                    <span></span>错误
+                </div>
+            </div>
+            <div class="row finish-margin-20">
+                <ul class="col-sm-10 finish-auto">
+                    <li class="col-sm-2"><span class="finish-dy-orange">1</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-orange">2</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-orange">3</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-orange">4</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-blue">5</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-blue">6</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 title-vertical-red">
+                    <span></span>主观题
+                </div>
+                <div class="col-sm-1 finish-yuan-orange finish-margin-30">
+                    <span></span>得分
+                </div>
+                <div class="col-sm-1 finish-yuan-gray finish-margin-30">
+                    <span></span>满分
+                </div>
+            </div>
+            <div class="row finish-margin-20 ">
+                <ul class="col-sm-10 finish-auto">
+                    <li class="col-sm-2"><span class="finish-dy-null">1</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">2</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">3</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">4</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">5</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">6</span></li>
+                </ul>
+                <ul class="col-sm-10 finish-totle">
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">2</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-sm-9 title-vertical-blue">
+                    <span></span>客观题-完型/阅读
+                </div>
+                <div class="col-sm-2 finish-yuan-orange finish-margin-30">
+                    <span></span>正确个数
+                </div>
+                <div class="col-sm-1 finish-yuan-gray finish-margin-30">
+                    <span></span>总数
+                </div>
+            </div>
+            <div class="row finish-margin-20">
+                <ul class="col-sm-10 finish-auto">
+                    <li class="col-sm-2"><span class="finish-dy-null">1</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">2</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">3</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">4</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">5</span></li>
+                    <li class="col-sm-2"><span class="finish-dy-null">6</span></li>
+                </ul>
+                <ul class="col-sm-10 finish-totle">
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">2</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                    <li class="col-sm-2 font-color"><span class="font-color-orange">1</span>/100</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/finish_homework.js"></script>
+</body>
+</html>

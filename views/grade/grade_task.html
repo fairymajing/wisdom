@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <title>我的班级-任务详情</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/hivideo.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/grade.css"/>
+</head>
+<body>
+<div class="grade-header"></div>
+<div class="container" id="task">
+    <div class="col-sm-12 margin-top-20 font-size-18"><strong>某某学习任务</strong></div>
+    <div class="col-sm-12 margin-top-20">
+        <div class="main-wrap">
+            <video ishivideo="true" autoplay="true" isrotate="false" autoHide="true">
+                <source src="http://www.html5videoplayer.net/videos/madagascar3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="col-sm-5 task-left margin-top-20">
+        <p>发布人</p>
+        <p>李大宝</p>
+        <p>发布时间</p>
+        <p>2016-07-15 15:45发布</p>
+        <p>任务简介</p>
+        <p class="font-color">撒娇多女扩军奥所女多所多多多多多多多多多多多多多多多多多多多多多多多多多多大所多那所女多军撒大声地撒大所大所多G
+            撒娇多女扩军奥所女多所多多多多多多多多多多多多多多多多多多多多多多多多多多大所多那所女多军撒大声地撒大所大所多GV的发光飞碟V的发光飞碟
+            撒娇多女扩军奥所女多所多多多多多多多多多多多多多多多多多多多多多多多多多多大所多那所女多军撒大声地撒大所大所多GV的发光飞碟</p>
+    </div>
+    <div class="col-sm-7 margin-top-20">
+        <ul class="task-tag">
+            <li class="task-tag-active">任务列表</li>
+            <li class="col-sm-offset-1">评论（15）</li>
+        </ul>
+        <div class="row" style="display: none">
+            <div class="col-sm-12 margin-top-20 task-list">
+                <div class="col-sm-1"><span class="task-list-ranking">1</span></div>
+                <div class="col-sm-2">
+                    <img src="../../img/wps-p.png">
+                </div>
+                <div class="col-sm-7">
+                    某某视频
+                </div>
+                <div class="col-sm-2">
+                    10MB
+                </div>
+            </div>
+            <div class="col-sm-12 margin-top-20 task-list">
+                <div class="col-sm-1"><span class="task-list-ranking">2</span></div>
+                <div class="col-sm-2">
+                    <img src="../../img/wps-w.png">
+                </div>
+                <div class="col-sm-7">
+                    某某视频
+                </div>
+                <div class="col-sm-2">
+                    10MB
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 margin-top-20 comment-list">
+                <div class="col-sm-2">
+                    <img src="../../img/math.png" class="comment-list-photo">
+                </div>
+                <div class="col-sm-8">
+                    这个课程好难，一学就会了！
+                </div>
+                <div class="col-sm-2 text-right comment-list-right">
+                    30分钟前<br><span class="over" v-on:click="reply()">回复</span>
+                </div>
+                <div class="col-sm-12 comment-list-hide">
+                    <input class="col-sm-12 margin-top-20 comment-list-input">
+                    <div class="text-right">
+                        <span class="col-sm-2 col-sm-offset-8 over"  v-on:click="clearReply()">取消</span>
+                        <span class="col-sm-2 "><span class="comment-list-btn over">评论</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/hivideo.js"></script>
+<script src="../../js/grade_task.js"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/personal.css">
+</head>
+<body>
+<div class="personal-header" id="headers"></div>
+<div class="container" id="personal">
+    <ul class="btn-group-vertical col-sm-3" role="group" id="personal-nav">
+        <li class="personal-nav-active" v-on:click="changeColor($event)">
+            <img src="../../img/person_zi.png" class="person-show person2">
+            <img src="../../img/person_zi_you.png" class="person-hide person1">个人资料
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_shou_you.png" class="person-show person1">
+            <img src="../../img/person_shou.png" class="person-hide person2">我的收藏
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_jia_you.png" class="person-show person1">
+            <img src="../../img/person_jia.png" class="person-hide person2">
+            加入班级
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_cuo_you.png" class="person-show person1">
+            <img src="../../img/person_cuo.png" class="person-hide person2">我的任务
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_xiao_you.png" class="person-show person1">
+            <img src="../../img/person_xiao.png" class="person-hide person2">我的消息
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/personal_ben.png" class="person-show person1">
+            <img src="../../img/personal_ben.png" class="person-hide person2">错题本&#12288;
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_yi_you.png" class="person-show person1">
+            <img src="../../img/person_yi.png" class="person-hide person2">意见反馈
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_guan_you.png" class="person-show person1">
+            <img src="../../img/person_guan.png" class="person-hide person2">关于我们
+        </li>
+        <li class="" v-on:click="changeColor($event)">
+            <img src="../../img/person_xiu_you.png" class="person-show person1">
+            <img src="../../img/person_xiu.png" class="person-hide person2">修改密码
+        </li>
+    </ul>
+    <div class="personal-right col-sm-9">
+        <div class="personal-message" >
+            <p class="title-vertical-orange font-color-orange"><span></span>个人资料</p>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">头像：</label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-2">
+                            <img class="img-circle message-photo" v-bind:src="message.avatar" />
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="help-block">支持JPG，JPEG，PNG，GIF，最大300k</p>
+                        </div>
+                        <div class="col-md-2">
+                            <!--<button type="button" class="btn btn-warning">上传头像</button>-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                            <!--<input class="message-upload" accept="image/jpeg,image/jpg,image/png,image/gif" type="file" name="file"/>-->
+                            <div id="container1">
+                                <!--<a class="btn btn-default btn-lg " id="pickfiles"  href="#">-->
+                                <button type="button" class="btn btn-warning">上传头像</button>
+                                <!--</a>-->
+                                <input class="message-upload" accept="image/jpeg,image/jpg,image/png,image/gif" type="file" name="file"/>
+                                <a class="btn btn-default btn-lg " id="pickfiles"  style="top: -70px;width: 80px; opacity: 0">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">用户名：</label>
+                    <div class="col-sm-10 message-padding">
+                        <span class="col-sm-10">{{message.user_name}}</span>
+                        <span class="col-sm-2 over" v-on:click="changeName()">修改</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">昵称：</label>
+                    <div class="col-sm-10 message-padding">
+                        <span class="col-sm-10">{{message.nick_name}}</span>
+                        <span class="col-sm-2 over" v-on:click="changeNick()">修改</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">绑定手机号：</label>
+                    <div class="col-sm-10 message-padding">
+                        <span class="col-sm-10">{{message.mobile}}</span>
+                        <span class="col-sm-2 over" v-on:click="changePhone()">修改</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">性别：</label>
+                    <div class="col-sm-10 message-padding message-sex">
+                        <span class="col-sm-10" v-if="message.sex==1">男</span>
+                        <span class="col-sm-10" v-if="message.sex==2">女</span>
+                        <span class="col-sm-2 over" v-on:click="sexChange()">修改</span>
+                    </div>
+                    <div class="col-sm-10 message-padding message-sex-none" style="display: none">
+                        <div class="col-sm-10" v-if="message.sex==1">
+                            <input  type="radio" name="sex"  value="male" checked> 男
+                            <input  type="radio" name="sex"  value="female"> 女
+                        </div>
+                        <div class="col-sm-10" v-if="message.sex==2">
+                            <input  type="radio" name="sex"  value="male"> 男
+                            <input  type="radio" name="sex"  value="female" checked> 女
+                        </div>
+                        <span class="col-sm-2 over" v-on:click="sexSave()">保存</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">所在学校：</label>
+                    <div class="col-sm-10 message-padding">
+                        <span class="col-sm-10">{{message.school_name}}</span>
+                        <span class="col-sm-2 over">修改</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">年级：</label>
+                    <div class="col-sm-10 message-padding">
+                        <span class="col-sm-10">{{message.grade_name}}</span>
+                        <span class="col-sm-2 over" v-on:click="gradeChange()">修改</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-message-nickname" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>修改昵称</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitNick()">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">请输入新昵称：</label>
+                    <div class="col-sm-9">
+                            <input type="text" class="form-control col-sm-6 nick-input">
+                        <button class="btn btn-warning col-sm-2 col-sm-offset-1">确认修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-message-phone" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>修改手机号</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitPhone()">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">请输入登录密码：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control col-sm-6" v-model="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">请输入新手机号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control col-sm-6" v-model="phoneNum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">验证码：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control col-sm-3" style="width: 90px !important;margin-right:20px;" v-model="validata">
+                        <button class="form-control phone-verification" id="validataBtn" type="button" v-on:click="sendValidata()">
+                            <span v-if="show">发送验证码</span>
+                            <span v-if="!show">{{count}}s后可重发</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button class="form-control phone-submit">确认修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-message-grade" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>修改所在年级</p>
+            <form class="form" v-on:submit.prevent="submitGrade()">
+                <div class="col-sm-3" v-for="(item,index) in grades">
+                    <div class="grade-list over" v-on:click="gradeSelect($event,index)">{{item.name}}</div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button class="form-control phone-submit">确认修改</button>
+                    </div>
+                </div>
+            </form>
+        </div >
+        <div class="personal-message-school" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>所在学校</p>
+            <form class="form-horizontal">
+                <div class="col-sm-5">
+                        <input type="text" class="form-control" >
+                    </div>
+                <div class="col-sm-2">
+                        <button class="form-control school-but">确认修改</button>
+                    </div>
+                <div class="col-sm-5">
+                        <p class="help-block">没有匹配到您的学校？点我添加</p>
+                    </div>
+                <div class="col-sm-12">
+                    <p class="help-block col-sm-12">输入学校的名字以匹配出合适的结果</p>
+                </div>
+            </form>
+        </div>
+        <div class="personal-message-name" style="display: none" >
+            <p class="title-vertical-orange font-color-orange"><span></span>修改用户名</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitName()">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">请输入新用户名：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control col-sm-6 name-input">
+                        <button class="btn btn-warning col-sm-2 col-sm-offset-1" type="submit">确认修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-about" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>关于我们</p>
+            <div class="col-sm-10 col-sm-offset-1">
+                <p class="text-center">
+                    <img src="../../img/about_logo.png">
+                </p>
+                <p class="font-size-16 margin-top-50">版权声明</p>
+                <br>
+                <p class="font-size-14">慧教易学科技在本服务中提供的题目答案、解析和扩展性内容（包括但不限于文本图片、音频、视频、图表等）的知识产权均归属好度科技所有。
+                    除另有特别声明外，好度科技提供本服务时所依托软件的著作权、专利权及其他知识产权均归属慧教易学科技所有。<br><br>
+                    上述及其他任何慧教易学科技依法拥有的知识产权均受到法律保护，未经好度科技书面许可，任何个人或单位不得以任何形式进行翻版、复制、
+                    转载、篡改或以其他方式使用或创造衍生作品。</p>
+                <br>
+                <p class="font-size-16">联系方式</p>
+                <br>
+                <p class="font-size-14">微信公众号：HJYX-3E-learning<br>
+                    客服邮箱：service@edu-smart.cc<br>
+                    客服电话：4006-521-530（周一至周五9:00 - 16:00）</p>
+            </div>
+        </div>
+        <div class="personal-grade" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>加入班级</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitJoin()">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">请输入邀请码：</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control col-sm-6 join-grade">
+                        <button class="btn btn-warning col-sm-2 col-sm-offset-1" type="submit">完成</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-grade-search" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>加入班级</p>
+            <div class="col-sm-6 col-sm-offset-2">
+                <div class="search-box">
+                    <h4 class="text-center">搜索结果</h4>
+                    <p class="margin-top-50">班级名称：&#12288;&#12288;&#12288;<span class="font-color">{{searchResult.title}}</span></p>
+                    <p>班级简介：&#12288;&#12288;&#12288;<span class="font-color">{{searchResult.brief}}</span></p>
+                    <p>班级教师：&#12288;&#12288;&#12288;<span class="font-color">{{searchResult.teacher_name}}</span></p>
+                    <p>班级教师：&#12288;&#12288;&#12288;<img v-bind:src="searchResult.logo" class="search-img"></p>
+                    <div class="text-center"><button class="btn btn-warning" v-on:click="searchJoin()">申请加入</button></div>
+                    <div class="text-center"><button class="btn btn-primary" v-on:click="searchClear()">取消</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-grade-result" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>加入班级</p>
+            <div class="col-sm-6 col-sm-offset-2">
+                <div class="search-box">
+                    <h4 class="text-center">您的申请已提交，请耐心等待教师审核！</h4>
+                    <div class="text-center"><button class="btn btn-warning" v-on:click="reload()">确定</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-task" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>我的任务</p>
+            <ul class="col-sm-12 col-sm-offset-1 task-tag">
+                <li class="col-sm-offset-1 task-tag-active">全部</li>
+                <li class="col-sm-offset-1">微课</li>
+                <li class="col-sm-offset-1">作业</li>
+            </ul>
+            <div class="col-sm-12 task-box">
+                <p class="col-sm-12 font-color">23小时前</p>
+                <div class="row margin-top-20">
+                    <div class="col-sm-4">
+                        <img src="../../img/personal_ren.png">
+                        <span class="col-sm-offset-1">函数与角的关系3<br><span class="font-color font-size-12" style="margin-left: 50px">数学冲刺班-李正元-数学</span></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-right">2016-07-15 21:00发布</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="task-box-btn">未观看</div>
+                    </div>
+                </div>
+                <div class="row margin-top-20">
+                    <div class="col-sm-4">
+                        <img src="../../img/personal_ren.png">
+                        <span class="col-sm-offset-1">函数与角的关系3<br><span class="font-color font-size-12" style="margin-left: 50px">数学冲刺班-李正元-数学</span></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-right">2016-07-15 21:00发布</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="task-box-btn-orange">已观看</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-collection" style="display:none;">
+            <p class="title-vertical-orange font-color-orange"><span></span>加入班级</p>
+            <ul class="col-sm-12 col-sm-offset-1 collection-tag">
+                <li class="col-sm-offset-1 collection-tag-active">公开课</li>
+                <li class="col-sm-offset-1">班级</li>
+                <li class="col-sm-offset-1">教师</li>
+            </ul>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="thumbnail collection-class-padding">
+                        <img src="../../img/math.png" class="collection-class-img">
+                        <div class="caption">
+                            <p>跟着名师学数学</p>
+                            <p class="font-color font-size-12"><img src="../../img/class_school.png">北京八中</p>
+                            <p>
+                                <img src="../../img/class_person.png">
+                                <span class="font-color font-size-12">王瓜瓜</span>
+                                <img src="../../img/class_look.png" class="col-sm-offset-3 col-sm-offset-2">
+                                <span class="font-color font-size-12">100</span>
+                                <img src="../../img/class_zan.png" class="col-sm-offset-1 col-sm-offset-1">
+                                <span class="font-color font-size-12">20</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail collection-class-padding">
+                        <img src="../../img/math.png" class="collection-teacher-img">
+                        <div class="caption">
+                            <p class="text-center">跟着名师学数学</p>
+                            <p class="font-color text-center font-size-12">北京八中</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="personal-news" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>我的消息</p>
+            <div class="col-sm-12">
+                <p class="col-sm-12 font-color">啥都看改大家爱神的箭欧艾斯加大撒大声地</p>
+                <hr class="news-line">
+            </div>
+        </div>
+        <div class="personal-password" style="display: none">
+            <p class="title-vertical-orange font-color-orange"><span></span>修改密码</p>
+            <form class="form-horizontal"  v-on:submit.prevent="submitPassword()">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">请输入原密码：</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control col-sm-6 old-password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">请输入新密码：</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control col-sm-6 new-password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">请输入新密码：</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control col-sm-6 re-password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button class="form-control phone-submit" type="submit">确认修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="personal-opinion" style="display: none;">
+            <p class="title-vertical-orange font-color-orange"><span></span>意见反馈</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitOpinion()">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">手机号：</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control opinion-phone" placeholder="您的手机号">
+                        <p class="help-block font-color">请输入您的手机号，以方便我们能第一时间联系您</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">QQ号：</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control opinion-qq" placeholder="您的QQ号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">反馈内容：</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control opinion-area" placeholder="反馈内容" maxlength="120"></textarea>
+                        <p class="help-block font-color">请输入10-120个字符</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 text-center margin-top-100">
+                   <button class="btn btn-warning" type="submit">提交反馈</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--<div id="personal">-->
+    <!--<div class="col-md-offset-1">-->
+        <!--<div class="navL"></div>-->
+        <!--<h1 class="xdz-head">个人资料</h1>-->
+        <!--<div class="col-md-9 divTopM">-->
+            <!--<form class="form-horizontal">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputEmail3" class="col-sm-2 control-label">头像：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<img class="col-sm-2" src="../../img/math.png" id="headimg" alt=""/>-->
+                        <!--<div class="col-sm-6">-->
+                            <!--<p class="ftp1">支持JPG，JPEG，PNG，GIF，最大300k</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-4" style="position: relative">-->
+                            <!--<div style="position: absolute;top: 35px;right: 25px;">-->
+                                <!--<button type="button" class="btn">上传头像</button>-->
+                            <!--</div>-->
+                            <!--<input style="position: absolute;top: 35px;right: 25px;opacity: 0;cursor: pointer" v-on:change="changeImg" accept="image/jpeg,image/jpg,image/png,image/gif"-->
+                                   <!--id="doc-ipt-file-2" type="file" name="file"/>-->
+                            <!--<span id="percentage"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">用户名：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span id="userName" style="word-break: break-word;"-->
+                              <!--class="col-sm-6">可爱的小呱呱</span>-->
+                        <!--<a href="" class="col-sm-5 text-right">修改</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">昵称：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span class="col-sm-6">昵称</span>-->
+                        <!--<a href="" class="col-sm-5 text-right">修改</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">绑定手机号：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span class="col-sm-6">13333334444</span>-->
+                        <!--<a href="" class="col-sm-5 text-right">修改</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">性别：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span class="col-sm-6">女</span>-->
+                        <!--<a href="" class="col-sm-5 text-right">修改</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">所在学校：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span class="col-sm-6">南开大学</span>-->
+                        <!--&lt;!&ndash;<a href="" class="col-sm-6">修改</a>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="inputPassword3" class="col-sm-2 control-label">年级：</label>-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<span class="col-sm-6">高二</span>-->
+                        <!--&lt;!&ndash;<a href="" class="col-sm-6">修改</a>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../plugins/js-sdk/dist/qiniu.js"></script>
+<script src="../../plugins/js-sdk/plupload-2.3.1/js/moxie.js"></script>
+<script src="../../plugins/js-sdk/plupload-2.3.1/js/plupload.full.min.js"></script>
+<script src="../../js/personal.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

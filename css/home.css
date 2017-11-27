@@ -1,0 +1,220 @@
+/*****************************************************************首页公开课程***********************************************************************/
+.home-banner{
+    background: url("../img/home_banner.png") no-repeat;
+    background-size: 100% 100%;
+    height:400px;
+    margin-top: -21px;
+}
+.home-search{
+    margin-top: 180px;
+    position: relative;
+}
+.home-search-input{
+    border:1px solid orange;
+    height:50px;
+    border-radius: 0px;
+    padding-left: 60px;
+}
+.home-search-button{
+    height:50px;
+    border-radius: 0px;
+    width:120px;
+    background-color: orange;
+    color: white;
+    border: none;
+}
+.home-search-img{
+    position: absolute;
+    z-index: 9;
+    top:15px;
+    left:20px;
+}
+.home-search-key{
+    color: #fff;
+    margin: 0 5px;
+}
+.home-position{
+    min-width: 50px;
+    max-height: 200px;
+    overflow: auto;
+}
+.home-sort{
+    min-width: 98px;
+}
+.home-grade{
+    min-width: 265px;
+}
+.home-grade li{
+    padding:10px 10px;
+}
+.home-class{
+    border-radius: 10px;
+}
+.home-class-bgi{
+    height:180px !important;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.home-class-padding{
+    padding: 0;
+    border-radius: 10px;
+    border-top: none;
+    box-shadow: 0px 6px 15px rgba(153, 153, 153, .4);
+}
+.now-place{
+    padding: 15px;
+}
+.position-line{
+    margin: 9px 0 !important;
+}
+.watch-up-box{
+    position: relative;
+    top: -35px;
+}
+.home-a{
+    padding: 3px 29px;
+    text-align: center;
+}
+/*****************************************************************教师个人主页***********************************************************************/
+.teacher-banner{
+    background: url("../img/teacher_bgi.png") no-repeat;
+    background-size: 100% 100%;
+    height:400px;
+    margin-top: -21px;
+    text-align: center;
+}
+.teacher-school{
+    display: inline-block;
+    min-width: 120px;
+    background-color: orange;
+    min-width: 120px;
+    height:35px;
+    line-height: 35px;
+}
+.teacher-display{
+    display: block;
+    margin:0 auto;
+}
+.teacher-photo{
+    width:150px;
+    height:150px;
+    margin:100px auto 25px;
+    border-radius: 75px;
+}
+.teacher-follow{
+    margin-top: 15px;
+}
+.teacher-tag-margin{
+    border-bottom: 1px solid #737373;
+    padding-bottom: 10px;
+}
+/*****************************************************************教师个人主页***********************************************************************/
+.search-keys{
+    margin: 0 5px;
+    color: #a0a0a0;
+}
+.search-key{
+    margin: 20px 0;
+}
+.search-help{
+    margin: 20px 0;
+}
+.home-class-teacher{
+    width:146px;
+    height:146px !important;
+    border: 2px dashed orange;
+    border-radius: 75px;
+    margin:33px 0 32px;
+}
+.search-tag>li.active>a{
+    background-color: #a0a0a0 !important;
+    color: white !important;
+}
+/*****************************************************************公开课详情***********************************************************************/
+.open-left{
+    border-right: 1px dashed #a0a0a0;
+}
+.open-left-photo{
+    width:70px;
+    height:70px;
+    border-radius: 35px;
+}
+.open-left-message{
+    line-height: 10px;
+    margin-top: 15px;
+}
+.open-left-btn{
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    background-color: orange;
+}
+.open-tag li{
+    float: left;
+    width:120px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.open-tag-active{
+    border-bottom: 1px solid #a0a0a0;
+}
+.chapter-list{
+    /*line-height: 48px;*/
+}
+.chapter-list-ranking{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    border-radius: 11px;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    background-color: orange;
+}
+.comment-list{
+    line-height: 50px;
+}
+.comment-list-photo{
+    width:50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.comment-list-right{
+    /*line-height: 25px;*/
+}
+.comment-list-btn{
+    display: inline-block;
+    width: 60px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #a0a0a0;
+    color: #fff;
+}
+.comment-list-input{
+    height:35px;
+}
+.comment-list-hide{
+    display: none;
+}
+.open-class-bgi{
+    height:140px !important;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.open-right-login{
+    display: inline-block;
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #a0a0a0;
+    color: #fff;
+}

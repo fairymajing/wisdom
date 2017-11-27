@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慧教易学</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/home.css"/>
+</head>
+<body>
+<div class="home-header" id="headers">
+</div>
+<div class="container-fluid" id="home">
+    <div class="row">
+        <div class="col-sm-12 home-banner">
+            <div class="col-sm-5 col-sm-offset-5 home-search">
+                <div class="input-group">
+                    <img src="../../img/search.png" class="home-search-img">
+                    <input type="text" class="form-control home-search-input" placeholder="搜索公开课/教师" v-model="search">
+                    <span class="input-group-btn">
+                        <a v-bind:href="['search.html?word='+search]" class="font-color-white"><button class="btn btn-warning home-search-button" type="button" v-on:click="searchBtn()">搜索</button></a>
+                    </span>
+                </div>
+                <p class="help-block col-sm-10 col-sm-offset-1 font-color-white">大家都在搜：
+                    <a href="" class="home-search-key">大大阿达</a>
+                    <a href="" class="home-search-key">大大阿达</a>
+                    <a href="" class="home-search-key">大大阿达</a>
+                    <a href="" class="home-search-key">大大阿达</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="nav navbar-nav margin-top-20">
+            <li class="now-place">
+                <img src="../../img/position.png">&#12288;当前位置：
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle font-color-normal" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="nowPosition">请选择</span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu home-position">
+                    <li class="over" v-for="(item,index) in areas" v-on:click="selectArea(index)">
+                        <a>{{item.name}}</a><hr class="position-line">
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown home-sort">
+                <a class="dropdown-toggle font-color-normal" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="homeSort" >默认排序</span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu home-position">
+                    <li class="home-a over" kind="" v-on:click="homeSort($event)">默认排序</li>
+                    <hr class="position-line">
+                    <li class="home-a over" kind="up" v-on:click="homeSort($event)">热度最高</li>
+                    <hr class="position-line">
+                    <li class="home-a over" kind="view_num" v-on:click="homeSort($event)">观看最多</li>
+                    <hr class="position-line">
+                    <li class="home-a over" kind="created_at" v-on:click="homeSort($event)">最新发布</li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle font-color-normal" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    年级 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu home-grade">
+                    <li class="col-sm-3">小学</li>
+                    <li class="col-sm-3">一年级</li>
+                    <li class="col-sm-3">二年级</li>
+                    <li class="col-sm-3">三年级</li>
+                    <li class="col-sm-3 col-sm-offset-3">四年级</li>
+                    <li class="col-sm-3">五年级</li>
+                    <li class="col-sm-3">六年级</li>
+                    <li class="col-sm-3">初中</li>
+                    <li class="col-sm-3">初一</li>
+                    <li class="col-sm-3">初二</li>
+                    <li class="col-sm-3">初三</li>
+                    <li class="col-sm-3">高中</li>
+                    <li class="col-sm-3">高一</li>
+                    <li class="col-sm-3">高二</li>
+                    <li class="col-sm-3">高三</li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle font-color-normal" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="nowClass">科目</span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu home-grade">
+                    <li class="col-sm-3 over" v-on:click="selectAll()">全部</li>
+                    <li class="col-sm-3 over" v-for="(item,index) in subjects" v-on:click="selectClass(index)">{{item.name}}</li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container margin-top-30">
+        <div class="row">
+            <div class="text-center margin-top-100" id="noneList" style="display: none">没有此类型课程</div>
+            <div class="col-sm-3 home-class" v-for="item in ocourseList" >
+                <div class="thumbnail home-class-padding">
+                    <a v-bind:href="['open_details.html?pid='+item.pid+'&fid='+item.fid]">
+                        <img v-bind:src="item.image" class="home-class-bgi">
+                    </a>
+                    <div class="caption" style="height: 110px;">
+                        <p>{{item.title}}</p>
+                        <p class="font-color font-size-14"><img src="../../img/class_school.png" class="margin-right-10">{{item.school}}</p>
+                        <p>
+                            <img src="../../img/class_person.png" class="margin-right-5">
+                            <span class="font-color font-size-14">{{item.uname}}</span>
+                        </p>
+                        <p class="text-right watch-up-box">
+                            <img src="../../img/class_look.png" class="text-right">
+                            <span class="font-color font-size-14 text-right">{{item.view_num}}</span>
+                            <img src="../../img/class_zan.png" class="col-sm-offset-1 text-right">
+                            <span class="font-color font-size-14 text-right">{{item.up}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/home.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+//    $(document).ready(function() {
+//        $(".home-header").load("../../views/common/public.html #home-header");
+//    })
+</script>
+</body>
+</html>

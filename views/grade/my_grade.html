@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的班级</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/grade.css"/>
+</head>
+<body>
+<div class="grade-header" id="headers"></div>
+<div class="container" id="grade">
+    <div class="row my-already" style="display:none">
+        <ul class="nav navbar-nav margin-top-20">
+            <li role="presentation" class="dropdown my-sort">
+                <a class="dropdown-toggle font-color-normal" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="mySort" >切换班级</span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu my-position">
+                    <li class="my-a over" v-for="(item,index) in grades" v-on:click="mySort(index)">
+                        {{item.title}}
+                        <hr class="position-line">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="col-sm-12 my-header my-header-first">
+            <div class="row">
+                <img v-bind:src="gradeMessage.logo" class="col-sm-3" style="height: 200px">
+                <div class="col-sm-9">
+                    <p>{{gradeMessage.title}}</p>
+                    <p class="row my-message">
+                        <span class="font-color col-sm-2"><img src="../../img/teacher_famous.png">{{gradeMessage.stu_num}}人</span>
+                        <span class="font-color col-sm-3"><img src="../../img/school_grade.png">天津一中标准班</span>
+                        <span class="font-color col-sm-4">班级类型：{{gradeMessage.type_name}}</span>
+                    </p>
+                    <p class="my-introduce">
+                        {{gradeMessage.brief}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-12 my-header my-header-second" style="display: none">-->
+            <!--<div class="row">-->
+                <!--<img v-bind:src="gradeMessage.logo" class="col-sm-3" style="height: 200px">-->
+                <!--<div class="col-sm-9">-->
+                    <!--<p>{{gradeMessage.title}}</p>-->
+                    <!--<p class="row my-message">-->
+                        <!--<span class="font-color col-sm-2"><img src="../../img/teacher_famous.png">{{gradeMessage.stu_num}}人</span>-->
+                        <!--<span class="font-color col-sm-3"><img src="../../img/school_grade.png">天津一中标准班</span>-->
+                        <!--<span class="font-color col-sm-4">班级类型：{{gradeMessage.type_name}}</span>-->
+                    <!--</p>-->
+                    <!--<p class="my-introduce">-->
+                        <!--{{gradeMessage.brief}}-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class=""  v-if="gradeStatus==4602">
+            <div class="col-sm-8">
+            <ul class="nav nav-tabs my-tag">
+                <li class="my-tag-title">课程信息</li>
+                <li role="presentation" ><a href="#" class="font-color">作业任务<span>12</span></a></li>
+                <li role="presentation" ><a href="#" class="font-color">学习任务<span>12</span></a></li>
+                <li role="presentation" ><a href="#" class="font-color">全部<span>24</span></a></li>
+            </ul>
+        </div>
+            <div class="col-sm-8">
+            <p class="my-class-title">6月12日 · 周五</p>
+            <div class="row my-class-list">
+                <div class="col-sm-2">
+                    <p><img src="../../img/grade_task.png"></p>
+                </div>
+                <div class="col-sm-5">
+                    <p>某某学习任务名</p>
+                    <p class="font-color">2016-6-16 | 16:00发布</p>
+                    <p class="font-color">教师名 · 语文</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class=" my-class-state font-color">已观看</p>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-warning my-class-details">查看详情</button>
+                </div>
+            </div>
+            <div class="row my-class-list">
+                <div class="col-sm-2">
+                    <p><img src="../../img/grade_work.png"></p>
+                </div>
+                <div class="col-sm-5">
+                    <p>某某学习作业名</p>
+                    <p class="font-color">2016-6-16 | 16:00发布</p>
+                    <p class="font-color">教师名 · 语文</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class=" my-class-state font-color">已完成</p>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-warning my-class-details">查看详情</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-8 grade-loading" v-if="gradeStatus==4601">
+            <p class="text-center"><img src="../../img/grade_loading.png"></p>
+        </div>
+        <div class="col-sm-8 grade-apply" style="display: none">
+            <p class="text-center"><img src="../../img/grade_loading_smart.png"></p>
+            <p class="text-center">
+                <button class="btn btn-warning grade-apply-button">立即申请加入</button>
+            </p>
+        </div>
+        <div class="col-sm-4 my-sub">
+            <div class="row">
+                <p class="col-sm-12"><strong>主讲老师</strong></p>
+                <div class="col-sm-2">
+                    <img src="../../img/math.png" class="img-circle my-sub-photo">
+                </div>
+                <div class="col-sm-5">
+                    <p>李大哥</p>
+                    <p>北师大出版社</p>
+                </div>
+                <div class="col-sm-5">
+                   <img src="../../img/grade_follow.png">
+                    <span>收藏该教师</span>
+                </div>
+                <div class="col-sm-12 my-sub-text">
+                   几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实
+                    几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打实几点睡看见爱多久啊实打
+                </div>
+            </div>
+            <div class="row my-sub-class-list">
+                <p class="col-sm-12"><strong>全部公开课</strong></p>
+                <div class="col-sm-5">
+                    <img src="../../img/math.png" class="my-sub-class-img">
+                </div>
+                <div class="col-sm-6">
+                    <h4>跟着名师学数学</h4>
+                    <p class="font-color"><img src="../../img/class_school.png">北京八中</p>
+                    <p class="font-color"><img src="../../img/class_person.png">王大哥</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-none">
+        <div class="col-sm-12 margin-top-100">
+            <p class="help-block col-sm-12 text-center">您当前没有加入任何班级，您可以输入邀请码来搜索班级</p>
+            <form class="form-horizontal" v-on:submit.prevent="submitJoin()">
+                <div class="form-group margin-top-50">
+                    <label class="col-sm-2 col-sm-offset-2 control-label">请输入邀请码：</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control col-sm-6 join-grade">
+                        <button class="btn btn-warning col-sm-6 col-sm-offset-1 join-submit" type="submit">完成</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/my_grade.js"></script>
+</body>
+</html>

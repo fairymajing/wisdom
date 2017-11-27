@@ -1,0 +1,122 @@
+body{
+    background-image: url("../img/login_bkg.png");
+    background-size: cover;
+    min-height: 500px;
+}
+/*****************************************************************登录***********************************************************************/
+/*.login-form{*/
+    /*margin-top:200px;*/
+    /*background-color: #fff;*/
+    /*padding: 20px 50px 15px;*/
+/*}*/
+.login-input-img{
+    position: relative;
+    top:34px;
+    left:20px;
+}
+.login-input{
+    height:42px;
+    border: 1px solid orange !important;
+    padding-left: 60px;
+}
+.login-submit{
+    background-color: orange;
+    height:50px;
+    border: none;
+    color: white;
+}
+.login-forget{
+    float: right;
+}
+.login-not{
+    margin-top: 10px;
+}
+.login-input-margin{
+    margin-top: -20px;
+    position: relative;
+}
+/*****************************************************************注册***********************************************************************/
+.register-check{
+    background: url("../img/checked.png") no-repeat ;
+    background-position: -8px -8px;
+}
+.register-check-box{
+    opacity: 0;
+}
+.register-check-text{
+    margin-left: 20px;
+}
+.checknum_btn{
+    position: absolute;
+    right: 0;
+    top:26px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 10px;
+    width:150px;
+    height:42px;
+    background-color: orange;
+    border: none;
+}
+/*****************************************************************完善信息***********************************************************************/
+.perfect-label{
+    padding-top: 11px !important;
+}
+.perfect-radio{
+    background: url("../img/radio.png") no-repeat ;
+    background-position: 0px 15px;
+}
+.perfect-radio-no{
+    background: url("../img/radio_no.png") no-repeat ;
+    background-position: 0px 15px;
+    margin-left: 20px;
+}
+.perfect-input-img{
+    position: absolute;
+    top:10px;
+    right:25px;
+}
+.perfect-close{
+    float: right;
+}
+.perfect-line{
+    height: 1px;
+    border: none;
+    background-color: #a0a0a0;
+}
+.perfect-sarch{
+    margin-top: 10px;
+    height: 246px;
+}
+.perfect-sarch hr{
+    margin:10px 0;
+}
+.perfect-grade-li{
+    margin-bottom: 20px;
+}
+.perfect-grade-tag{
+    color: #a0a0a0;
+    text-align: center;
+    line-height: 40px;
+    width:100px;
+    height:40px;
+    border: 1px solid orange;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.perfect-grade-tag-fir{
+    margin-left: 20px;
+}
+.perfect-grade-active{
+    background-color: orange;
+    color: #fff;
+}
+.perfect-form-fill{
+    padding-top: 20px;
+}
+/*****************************************************************忘记密码***********************************************************************/
+.forget-form{
+    padding-bottom: 40px;
+}

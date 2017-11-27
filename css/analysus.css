@@ -1,0 +1,66 @@
+/************************************************************填空题(1)*******************************************************************/
+.blanks-left{
+    padding-right: 100px;
+}
+.blanks-answer-num{
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    border-radius: 30px;
+    background-color: orange;
+    color: #fff;
+    margin-top: 25px;
+    padding-left:12px;
+}
+.blanks-answers{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height:60px;
+}
+.blanks-right{
+    background-color: #f8f8f8;
+}
+.blanks-video{
+    width:120px;
+    height:80px;
+}
+.blanks-cover{
+    width:120px;
+    height:80px;
+    position: relative;
+    top:-80px;
+    background-color: rgba(0,0,0,0.4);
+    line-height: 80px;
+    text-align: center ;
+}
+.blanks-right .col-sm-3{
+    padding-right: 0 !important;
+}
+/************************************************************问答题*******************************************************************/
+.qa-box{
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(153, 153, 153, .4)
+}
+.selection-answer,
+.cloze-answer{
+    width: 100%;
+    height:60px;
+    line-height: 60px;
+    padding-left: 30px !important;
+    border-radius: 10px;
+}
+.selection-answers{
+    margin-right: 40px !important;
+    opacity: 0;
+    padding-left: 50px;
+}
+.selection-radio{
+    border: 1px solid orange;
+    background: url("../img/question_radio.png") no-repeat ;
+    background-position: 24px 18px;
+}
+.selection-radio-no{
+    background: url("../img/question_radio_no.png") no-repeat ;
+    background-position: 24px 18px;
+}

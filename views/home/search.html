@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/home.css"/>
+</head>
+<body>
+<div class="search-header"></div>
+<div class="container" id="search">
+    <div class="row">
+        <div class="input-group col-sm-12">
+            <img src="../../img/search.png" class="home-search-img">
+            <input type="text" class="form-control home-search-input font-size-18" placeholder="搜索公开课/教师" v-model="words">
+            <span class="input-group-btn">
+                <button class="btn btn-warning home-search-button" type="button" v-on:click="searchBtn()">搜索</button>
+            </span>
+        </div>
+        <div class="col-sm-12 search-key font-size-16">
+            大家都在搜索：
+            <a href="" class="search-keys">大大阿达</a>
+            <a href="" class="search-keys">大大阿达</a>
+            <a href="" class="search-keys">大大阿达</a>
+            <a href="" class="search-keys">大大阿达</a>
+        </div>
+        <ul class="nav nav-tabs search-tag">
+            <li role="presentation" class="active" v-on:click="showAll()"><a href="#" class="font-color">全部</a></li>
+            <li role="presentation" v-on:click="showTeacher()"><a href="#" class="font-color">只搜教师</a></li>
+            <li role="presentation" v-on:click="showClass()"><a href="#" class="font-color">只搜公开课</a></li>
+        </ul>
+        <p class="help-block search-help col-sm-12 col-sm-offset-1 font-size-16">为您找到{{ocourseList.length+teacherList.length}}个结果</p>
+        <div class="col-sm-3 home-class" v-for="item in ocourseList">
+            <div class="thumbnail home-class-padding">
+                <img v-bind:src="item.image" class="home-class-bgi">
+                <div class="caption">
+                    <p>{{item.title}}</p>
+                    <p class="font-color font-size-16"><img src="../../img/class_school.png" class="margin-right-10">{{item.school}}</p>
+                    <p>
+                        <img src="../../img/class_person.png" class="margin-right-10">
+                        <span class="font-color font-size-16">{{item.teacher_name}}</span>
+                        <img src="../../img/class_look.png" class="col-sm-offset-2">
+                        <span class="font-color font-size-16">100</span>
+                        <img src="../../img/class_zan.png" class="col-sm-offset-1">
+                        <span class="font-color font-size-16">20</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-3 search-teacher"  v-for="item in teacherList">
+            <div class="thumbnail home-class-padding">
+                <img v-bind:src="item.avatar" class="home-class-teacher">
+                <div class="caption">
+                    <h4 class="text-center">{{item.teacher_name}}</h4>
+                    <p class="font-color text-center font-size-16">{{item.school}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/search.js"></script>
+</body>
+</html>

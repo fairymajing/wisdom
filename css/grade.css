@@ -1,0 +1,211 @@
+/***************************************************************我的班级*********************************************************************/
+.my-message{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.my-introduce{
+    line-height: 28px;
+}
+.my-header{
+    border: 1px solid #ddd;
+    border-top: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+.my-tag>li{
+    float: right;
+}
+.my-tag-title{
+    float: left !important;
+    padding:10px 15px;
+    font-weight: bold;
+}
+.my-class-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my-class-state{
+    border:1px solid #a0a0a0;
+    width:65px;
+    height:25px;
+    line-height: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+.my-class-details{
+    background-color: orange;
+    height:40px;
+    width:120px;
+    text-align: center;
+}
+.my-class-list{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.my-sub{
+    border-left: 1px dashed #ddd;
+}
+.my-sub-photo{
+    width:60px;
+    height:60px;
+}
+.my-sub-text{
+    line-height: 28px;
+}
+.my-sub-class-img{
+    width: 100%;
+    height: 90px;
+}
+.my-sub-class-list{
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.grade-loading,
+.grade-apply{
+    padding-top: 150px;
+}
+.grade-apply-button{
+    height:50px;
+    width:220px;
+}
+.join-grade{
+    width:300px;
+}
+.join-submit{
+    float: left;
+    width:100px;
+}
+.my-sort{
+    min-width: 98px;
+}
+.my-position{
+    min-width: 117px;
+    overflow: auto;
+    padding-top: 12px;
+}
+.my-a{
+    padding: 3px 0;
+    text-align: center;
+}
+.position-line{
+    margin: 9px 0 !important;
+}
+/************************************************************班级学习任务详情*******************************************************************/
+/*.grade-main{*/
+    /*position: relative;*/
+/*}*/
+/*.grade-video{*/
+    /*width:100%;*/
+    /*height:450px;*/
+    /*object-fit: fill;*/
+/*}*/
+/*.grade-video-play{*/
+    /*position: absolute;*/
+    /*z-index: 99;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*-webkit-transform: translate(-50%, -50%);*/
+    /*transform: translate(-50%, -50%);*/
+/*}*/
+/*.grade-main .controls {*/
+    /*width: 100%;*/
+    /*height: 2rem;*/
+    /*line-height: 2rem;*/
+    /*font-size: 0.8rem;*/
+    /*color: white;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*background-color: rgba(0, 0, 0, .55);*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+/*}*/
+
+/*.grade-main .controls>* {*/
+    /*flex: 1;*/
+/*}*/
+
+/*.grade-main .controls>*:nth-child(1) {*/
+    /*flex: 6;*/
+/*}*/
+
+/*.grade-main .controls>*:nth-child(2) {*/
+    /*flex: 2;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.grade-main .controls .progressBar {*/
+    /*margin: .75rem 5%;*/
+    /*position: relative;*/
+    /*width: 90%;*/
+    /*height: .5rem;*/
+    /*!*background-color: rgba(200, 200, 200, .55);*!*/
+    /*background-color: #fff;*/
+    /*border-radius: 10px;*/
+/*}*/
+
+/*.grade-main .controls .timeBar {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 0;*/
+    /*height: 100%;*/
+    /*!*background-color: rgba(99, 110, 225, .85);*!*/
+    /*background-color: orange;*/
+    /*border-radius: 10px;*/
+/*}*/
+.task-left{
+    border-right: 1px dashed #a0a0a0;
+}
+.task-tag li{
+    float: left;
+    width:80px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.task-tag-active{
+    border-bottom: 1px solid #a0a0a0;
+}
+.task-list{
+    line-height: 48px;
+}
+.task-list-ranking{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    border-radius: 11px;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    background-color: orange;
+}
+.comment-list{
+    line-height: 50px;
+}
+.comment-list-photo{
+    width:50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.comment-list-right{
+    line-height: 25px;
+}
+.comment-list-btn{
+    display: inline-block;
+    width: 60px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #a0a0a0;
+    color: #fff;
+}
+.comment-list-input{
+    height:35px;
+}
+.comment-list-hide{
+    display: none;
+}

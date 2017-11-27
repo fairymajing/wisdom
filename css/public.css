@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none !important;
+}
+ul,ol{
+    list-style: none;
+}
+/*****************************************************************导航***********************************************************************/
+.navbar-orange{
+    background-color: orange;
+    height:100px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#ffc363, #ffa00e); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffc363, #ffa00e); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffc363, #ffa00e); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffc363, #ffa00e); /* 标准的语法 */
+}
+.navbar-orange-small{
+    background-color: orange;
+    height:80px;
+    line-height: 80px;
+    background: -webkit-linear-gradient(#ffc363, #ffa00e); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffc363, #ffa00e); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffc363, #ffa00e); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffc363, #ffa00e); /* 标准的语法 */
+}
+/*.nav-text-color{*/
+    /*color: white !important;*/
+/*}*/
+.nav-login{
+    margin-top:0;
+}
+.nav-remarks{
+    margin-top: 0;
+}
+.navbar-ul{
+    margin-top: 15px;
+    margin-left: 40px;
+}
+.navbar-nav-right{
+    float: right;
+    position: relative;
+}
+.nav-bell{
+    margin-top: 10px;
+}
+.nav-photo{
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+}
+.analysis-header-right{
+    float: right;
+}
+.analysis-header-right li{
+    color: #fff;
+    padding: 0 30px;
+}
+.nav-person:hover .nav-exit{
+    display: block;
+}
+.nav-exit:hover {
+    display: block;
+}
+.nav-person{
+    position: relative !important;
+}
+.nav-exit{
+    display: none;
+    position: absolute !important;
+    top:70px;
+    width:120px;
+    left:50%;
+    margin-left: -60px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: orange;
+    border: 2px solid #ff8a00;
+    z-index: 10;
+}
+/*****************************************************************字体***********************************************************************/
+body{
+    color: #737373;
+    font-size: 18px;
+}
+.font-color-normal{
+    color: #737373 !important;
+}
+.font-color{
+    color: #a0a0a0 !important;
+}
+.font-color-white{
+    color: #fff !important;
+}
+.font-color-orange{
+    color: orange;
+}
+.font-size-12{
+    font-size: 12px !important;
+}
+.font-size-14{
+    font-size: 14px !important;
+}
+.font-size-16{
+    font-size: 16px !important;
+}
+.font-size-18{
+    font-size: 18px !important;
+}
+.font-size-20{
+    font-size: 20px !important;
+}
+.font-size-28{
+    font-size: 28px !important;
+}
+.font-size-mid{
+    font-size: 22px !important;
+}
+.font-line-height-28{
+    line-height: 28px !important;
+}
+/*****************************************************************圆角***********************************************************************/
+.input-radius{
+    border-radius: 10px;
+}
+.input-style{
+    height:42px;
+    border: 1px solid orange !important;
+}
+.margin-top-10{
+    margin-top: 10px !important;
+}
+.margin-top-20{
+    margin-top: 20px !important;
+}
+.margin-top-30{
+    margin-top: 30px !important;
+}
+.margin-top-50{
+     margin-top: 50px !important;
+ }
+.margin-top-100{
+    margin-top: 100px !important;
+}
+
+.margin-right-5{
+    margin-right: 5px !important;
+}
+.margin-right-10{
+    margin-right: 10px !important;
+}
+/*****************************************************************底部***********************************************************************/
+.copyright{
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+/*****************************************************************弹框***********************************************************************/
+.padding-form{
+    background-color: #fff;
+    padding: 20px 50px 15px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/*****************************************************************竖线标题***********************************************************************/
+.title-vertical-blue,
+.title-vertical-red{
+    line-height: 38px;
+    margin-top: 20px;
+}
+.title-vertical-orange{
+    line-height: 38px;
+    margin-bottom: 50px;
+}
+.title-vertical-blue>span{
+    display: inline-block;
+    width: 6px;
+    height:38px;
+    background-color: #01a0a3;
+    margin-right: 30px;
+    float: left;
+}
+.title-vertical-red>span{
+    display: inline-block;
+    width: 6px;
+    height:38px;
+    background-color: #f7713f;
+    margin-right: 30px;
+    float: left;
+}
+.title-vertical-orange>span{
+    display: inline-block;
+    width: 6px;
+    height:38px;
+    background-color: orange;
+    margin-right: 30px;
+    float: left;
+}
+.over{
+    cursor: pointer;
+}

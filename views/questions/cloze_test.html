@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的班级</title>
+    <link rel="stylesheet" href="../../plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/public.css"/>
+    <link rel="stylesheet" href="../../css/questions.css"/>
+</head>
+<body>
+<div class="question-header"></div>
+<div class="container" id="question">
+    <!-----------------------------------------------------完形填空-------------------------------------------------------->
+    <div class="cloze"  >
+        <div class="row">
+            <div class="col-sm-1">
+                完形填空
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多
+            </p>
+            <div class="col-sm-1 question-but">
+                <button class="btn btn-info">上一小题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一小题</button>
+            </div>
+        </div>
+        <div class="row cloze-answer-box">
+            <div class="col-sm-12 ">
+                <label class="control-label cloze-answer cloze-radio" >
+                    <input type="radio" name="blankRadio"  value="option1" aria-label="..." class="cloze-answers" checked>A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers">B.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers">C.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers">D.独山大道
+                </label>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------多选题--------------------------------------------------------->
+    <div class="multiselect" style="display: none">
+        <div class="row">
+            <div class="col-sm-1">
+                多选题
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+                多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多
+                选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 ">
+                <label class="control-label multiselect-answer cloze-radio-no" >
+                    <input type="radio" name="blankRadio"  value="option1" aria-label="..." class="multiselect-answers">A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label multiselect-answer cloze-radio-no" >
+                    <input type="radio" name="blankRadio"  value="option1" aria-label="..." class="multiselect-answers">B.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label multiselect-answer cloze-radio-no" >
+                    <input type="radio" name="blankRadio"  value="option1" aria-label="..." class="multiselect-answers">C.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label multiselect-answer cloze-radio-no" >
+                    <input type="radio" name="blankRadio"  value="option1" aria-label="..." class="multiselect-answers">D.独山大道
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------------------阅读理解-------------------------------------------------------->
+    <div class="reading" style="display: none">
+        <div class="row">
+            <div class="col-sm-1">
+                多选题
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+                多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多
+                选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+            </p>
+            <div class="col-sm-1 question-but">
+                <button class="btn btn-info">上一小题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一小题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-8">
+                1/20小题
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 help-block">1.分别是看见对方空间水电费递四方速递</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="control-label cloze-answer cloze-radio" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers" checked>A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers" checked>A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers" checked>A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12">
+                <label class="control-label cloze-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="cloze-answers" checked>A.独山大道
+                </label>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------填空题(1)--------------------------------------------------------->
+    <div class="blanks" style="display: none">
+        <div class="row">
+            <div class="col-sm-1">
+                填空题
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+                多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多
+                选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+            </p>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="blanksFir" class="col-sm-1 control-label blanks-answer-num">1</label>
+                <div class="col-sm-11">
+                    <input type="text" class="form-control blanks-answers" id="blanksFir">
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="blanksSec" class="col-sm-1 control-label blanks-answer-num">2</label>
+                <div class="col-sm-11">
+                    <input type="text" class="form-control blanks-answers" id="blanksSec">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------填空题(2)--------------------------------------------------------->
+    <div class="vacancy" style="display: none">
+        <div class="row">
+            <div class="col-sm-1">
+                填空题
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+                多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多选题多
+                选题多选题多选题多选题多选题多选题多选题多选题多选题多选题
+            </p>
+        </div>
+        <div class="row">
+            <textarea class="col-sm-12 vacancy-area" placeholder="请输入文字答案"></textarea>
+        </div>
+        <div class="row vacancy-question">
+            <div class="col-md-3 vacancy-photo">
+                <img src="../../img/close_photo.png" class="vacancy-close">
+                <img src="../../img/math.png" class="vacancy-img">
+            </div>
+            <div class="col-md-3">
+                <img src="../../img/picture_loading.png" class="vacancy-img">
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------不定项--------------------------------------------------------->
+    <div class="indefinite" style="display: none">
+        <div class="row">
+            <div class="col-sm-1">
+                不定项
+            </div>
+            <div class="col-sm-1">
+                <span class="font-color-orange">1</span>/11
+            </div>
+            <div class="col-sm-1 col-sm-offset-6  question-but">
+                <button class="btn btn-info">上一题</button>
+            </div>
+            <div class="col-sm-1 col-sm-offset-1 question-but">
+                <button class="btn btn-warning">下一题</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-sm-12 question-text">萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大所多萨迪克军奥所大所多撒大所多多大
+                所多萨迪克军奥所大所多撒大所多多大所多
+            </p>
+        </div>
+        <div class="row indefinite-answer-box">
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">A.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">B.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">C.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">D.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers" >E.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">F.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">G.独山大道
+                </label>
+            </div>
+            <div class="col-sm-12 ">
+                <label class="control-label indefinite-answer cloze-radio-no" >
+                    <input type="radio" name=""  value="" aria-label="..." class="indefinite-answers">H.独山大道
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dep/jquery.js"></script>
+<script src="../../dep/vue.js"></script>
+<script src="../../plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../js/cloze_test.js"></script>
+</body>
+</html>
